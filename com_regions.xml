@@ -28,7 +28,6 @@
         <files folder="administrator/components/com_regions">
             <file>dispatcher.php</file>
             <file>regions.php</file>
-            <file>regions.xml</file>
 
             <folder>databases</folder>
             <folder>install</folder>
@@ -39,7 +38,9 @@
 
         <languages folder="administrator/components/com_regions">
             <language tag="en-GB">language/en-GB/en-GB.com_regions.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_regions.sys.ini</language>
             <language tag="fr-FR">language/fr-FR/fr-FR.com_regions.ini</language>
+            <language tag="fr-FR">language/fr-FR/fr-FR.com_regions.sys.ini</language>
         </languages>
     </administration>
 </extension>
