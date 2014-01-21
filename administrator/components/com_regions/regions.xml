@@ -28,6 +28,7 @@
         <files folder="administrator/components/com_regions">
             <file>dispatcher.php</file>
             <file>regions.php</file>
+            <file>regions.xml</file>
 
             <folder>databases</folder>
             <folder>install</folder>
