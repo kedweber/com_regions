@@ -22,6 +22,10 @@
         </sql>
     </uninstall>
 
+    <files folder="components/com_regions">
+        <file>regions.php</file>
+    </files>
+
     <administration>
         <menu>COM_REGIONS</menu>
 
