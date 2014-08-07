@@ -1,1 +1,0 @@
-DROP TABLE IF EXISTS `#__regions_regions`;
