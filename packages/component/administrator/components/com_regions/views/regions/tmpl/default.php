@@ -17,9 +17,11 @@
                     <th>
                         <?= @helper('grid.sort', array('column' => 'title', 'title' => @text('TITLE'))); ?>
                     </th>
-                    <th width="5%">
-                        <?= @text('Image'); ?>
-                    </th>
+                    <? if($regions->isTranslatable()) : ?>
+                        <th>
+                            <?= @text('Translations'); ?>
+                        </th>
+                    <? endif; ?>
                     <th width="5%">
                         <?= @helper('grid.sort', array('column' => 'order', 'title' => @text('ORDER'))); ?>
                     </th>
@@ -48,11 +50,14 @@
                             <?= $region->title; ?>
                         </a>
                     </td>
-                    <td>
-                        <a href="">
-                            <?= @text('IMAGE') ?>
-                        </a>
-                    </td>
+                    <? if($region->isTranslatable()) : ?>
+                        <td>
+                            <?= @helper('com://admin/translations.template.helper.language.translations', array(
+                                'row' => $region->id,
+                                'table' => $region->getTable()->getName()
+                            )); ?>
+                        </td>
+                    <? endif; ?>
                     <td>
                         <?= @helper('grid.order', array('row' => $region, 'total' => $total)); ?>
                     </td>
