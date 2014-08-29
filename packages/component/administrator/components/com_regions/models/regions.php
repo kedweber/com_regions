@@ -10,7 +10,6 @@ class ComRegionsModelRegions extends ComDefaultModelDefault
         parent::__construct($config);
 
         $this->_state
-            ->insert('taxonomy_taxonomy_id' , 'int', null, true)
             ->insert('enabled'              , 'int')
         ;
     }
@@ -22,11 +21,7 @@ class ComRegionsModelRegions extends ComDefaultModelDefault
     {
         $state = $this->_state;
 
-//        parent::_buildQueryWhere($query);
-
-        if(is_numeric($state->taxonomy_taxonomy_id)) {
-            $query->where('taxonomy_taxonomy_id', '=', $state->taxonomy_taxonomy_id);
-        }
+        parent::_buildQueryWhere($query);
 
         if(is_numeric($state->enabled)) {
             $query->where('tbl.enabled', '=', $state->enabled);
