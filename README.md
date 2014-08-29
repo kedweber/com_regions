@@ -31,16 +31,16 @@ section:
 
 ```json
 {
-    "name": "cta-platform/regions",
+    "name": "cta/regions",
     "type": "vcs",
-    "url": "https://git.assembla.com/cta-platform.regions.git"
+    "url": "https://github.com/cta-int/regions.git"
 }
 ```
 
 The require section should contain the following line:
 
 ```json
-    "cta-platform/regions": "1.0.*",
+    "cta/regions": "1.0.*",
 ```
 
 Afterward, just run `composer update` from the root of your Joomla project.

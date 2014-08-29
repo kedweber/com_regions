@@ -32,5 +32,22 @@
                 <?= @service('com://admin/cck.controller.element')->cck_fieldset_id($region->cck_fieldset_id)->row($region->id)->table('regions_regions')->getView()->assign('row', $region)->layout('list')->display(); ?>
             </fieldset>
         </div>
+        <div class="span4">
+            <fieldset>
+                <legend><?= @text('DETAILS'); ?></legend>
+                <div class="control-group">
+                    <label class="control-label"><?= @text('PUBLISHED'); ?></label>
+                    <div class="controls">
+                        <?= @helper('select.booleanlist', array('name' => 'enabled', 'selected' => $region->enabled)); ?>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label"><?= @text('Translated'); ?></label>
+                    <div class="controls">
+                        <?= @helper('select.booleanlist', array('name' => 'translated', 'selected' => $region->translated)); ?>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
     </div>
 </form>
