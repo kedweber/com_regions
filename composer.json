@@ -2,7 +2,7 @@
     "name": "cta/regions",
     "type": "joomlatools-installer",
     "description": "Regions Package",
-    "keywords": ["joomla", "region"],
+    "keywords": ["joomla", "nooku", "regions"],
     "homepage": "https://github.com/cta-int/regions",
     "authors": [
         {
