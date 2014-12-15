@@ -2,13 +2,13 @@
 <extension type="component" version="3.0.0" method="upgrade" overwrite="true">
     <name>Regions</name>
     <identifier>com:regions</identifier>
-    <author>Dave Li</author>
+    <author>Moyo Web Architects</author>
     <creationDate>October 2013</creationDate>
     <copyright>Copyright (C) 2013 Moyo Web Architects and Contributors. (http://www.moyoweb.nl)</copyright>
     <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3</license>
-    <authorEmail>dave@moyoweb.nl</authorEmail>
+    <authorEmail>info@moyoweb.nl</authorEmail>
     <authorUrl>www.moyoweb.nl</authorUrl>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <description>Regions</description>
 
     <install>
