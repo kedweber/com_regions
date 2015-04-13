@@ -13,7 +13,7 @@ class ComRegionsDatabaseTableRegions extends KDatabaseTableDefault
                 'creatable',
                 'modifiable',
                 'identifiable',
-                'orderable',
+                'com://admin/translations.database.behavior.orderable',
                 'sluggable',
                 'com://admin/cck.database.behavior.elementable',
                 'com://admin/taxonomy.database.behavior.relationable',
