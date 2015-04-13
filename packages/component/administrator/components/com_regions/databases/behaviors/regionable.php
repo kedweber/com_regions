@@ -10,6 +10,15 @@
 
 class ComRegionsDatabaseBehaviorRegionable extends KDatabaseBehaviorAbstract
 {
+    public function _initialize(KConfig $config)
+    {
+        $config->append(array(
+            'priority' => KCommand::PRIORITY_LOW
+        ));
+        
+        parent::_initialize($config);
+    }
+    
     public function _beforeTableSelect(KCommandContext $context)
     {
         // First we will query com_profiles.
@@ -22,9 +31,13 @@ class ComRegionsDatabaseBehaviorRegionable extends KDatabaseBehaviorAbstract
             if(empty($regions)) {
                 $context->query = null;
             } else if($context->query) {
+                $context->query->where('(', null, null, 'AND');
+                
                 foreach ($regions as $region) {
-                    $context->query->where('FIND_IN_SET(' . $region . ', REPLACE(SUBSTRING_INDEX(SUBSTR(ANCESTORS,LOCATE(\'"REGIONS":[\',ANCESTORS)+CHAR_LENGTH(\'"REGIONS":[\')),\']\', 1),\'\', \'\'))', null, null, 'OR');
+                    $context->query->where('FIND_IN_SET(' . $region . ', REPLACE(SUBSTRING_INDEX(SUBSTR(ANCESTORS,LOCATE(\'"REGIONS":[\',ANCESTORS)+CHAR_LENGTH(\'"REGIONS":[\')),\']\', 1),\'\', \'\'))', null, null, $region == $regions[0] ? '' : 'OR');
                 }
+
+                $context->query->where(')', null, null, null);
             }
         }
     }
