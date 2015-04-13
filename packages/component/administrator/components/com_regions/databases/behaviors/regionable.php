@@ -17,9 +17,12 @@ class ComRegionsDatabaseBehaviorRegionable extends KDatabaseBehaviorAbstract
         $user = JFactory::getUser();
 
         if(!$user->get('isRoot')) {
-            $groups = $this->getService('com://admin/profile.model.groups')->user_id($user->id)->getList()->getRegions();
-            $regions = array();
+            $regions = $this->getService('com://admin/profile.model.groups')->group_id(array_values($user->groups))->getList()->getRegions();
 
+            if(empty($regions)) {
+                $context->query = null;
+            }
+        
             foreach ($regions as $region) {
                 $context->query->where('FIND_IN_SET(' . $region . ', REPLACE(SUBSTRING_INDEX(SUBSTR(ANCESTORS,LOCATE(\'"REGIONS":[\',ANCESTORS)+CHAR_LENGTH(\'"REGIONS":[\')),\']\', 1),\'\', \'\'))', null, null, 'OR');
             }
