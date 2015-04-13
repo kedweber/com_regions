@@ -21,10 +21,10 @@ class ComRegionsDatabaseBehaviorRegionable extends KDatabaseBehaviorAbstract
 
             if(empty($regions)) {
                 $context->query = null;
-            }
-        
-            foreach ($regions as $region) {
-                $context->query->where('FIND_IN_SET(' . $region . ', REPLACE(SUBSTRING_INDEX(SUBSTR(ANCESTORS,LOCATE(\'"REGIONS":[\',ANCESTORS)+CHAR_LENGTH(\'"REGIONS":[\')),\']\', 1),\'\', \'\'))', null, null, 'OR');
+            } else if($context->query) {
+                foreach ($regions as $region) {
+                    $context->query->where('FIND_IN_SET(' . $region . ', REPLACE(SUBSTRING_INDEX(SUBSTR(ANCESTORS,LOCATE(\'"REGIONS":[\',ANCESTORS)+CHAR_LENGTH(\'"REGIONS":[\')),\']\', 1),\'\', \'\'))', null, null, 'OR');
+                }
             }
         }
     }
