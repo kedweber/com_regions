@@ -1,1 +1,1 @@
-# Changelog com_regions### 1.1.0 - 13 april 2015* Added Region-based ACL### 1.0.6* Updated `install.sql` to remove CCK dependencies.
+# Changelog com_regions### 1.1.1 - 14 april 2015* Minor fix in query builder### 1.1.0 - 13 april 2015* Added Region-based ACL### 1.0.6* Updated `install.sql` to remove CCK dependencies.
