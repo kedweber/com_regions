@@ -21,6 +21,7 @@ The regions component was developed by [Moyo Web Architects](http://moyoweb.nl).
     * com_routes
     * com_taxonomy
     * com_translations
+    * com_profile
 
 ## Installation
 
