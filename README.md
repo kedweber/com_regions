@@ -21,6 +21,7 @@ The regions component was developed by [Moyo Web Architects](http://moyoweb.nl).
     * com_routes
     * com_taxonomy
     * com_translations
+    * com_profile
 
 ## Installation
 
@@ -40,7 +41,7 @@ section:
 The require section should contain the following line:
 
 ```json
-    "cta/regions": "1.0.*",
+    "cta/regions": "1.1.*",
 ```
 
 Afterward, just run `composer update` from the root of your Joomla project.
