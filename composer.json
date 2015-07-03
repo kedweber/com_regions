@@ -1,9 +1,9 @@
 {
-    "name": "cta/regions",
+    "name": "moyo/regions",
     "type": "joomlatools-installer",
     "description": "Regions Package",
     "keywords": ["joomla", "nooku", "regions"],
-    "homepage": "https://github.com/cta-int/regions",
+    "homepage": "https://github.com/moyoweb/com_regions",
     "authors": [
         {
             "name": "Joachim van de Haterd",
